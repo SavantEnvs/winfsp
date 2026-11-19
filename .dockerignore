@@ -1,0 +1,12 @@
+# .dockerignore for the commit-image build.
+# Bake in the FULL repo (including .git history — the grader uses it), dropping only local build
+# outputs of mayhem/build.sh and editor/OS cruft. (Upstream's own top-level build/ directory holds
+# tracked Visual Studio project files, so it is NOT excluded.)
+mayhem/build/
+/fuzz_*
+ctrf-report.json
+*.o
+*.a
+.DS_Store
+*.swp
+*~

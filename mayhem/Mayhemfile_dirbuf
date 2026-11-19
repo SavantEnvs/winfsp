@@ -1,0 +1,9 @@
+project: savantenvs/winfsp
+target: dirbuf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dirbuf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dirbuf
+    libfuzzer: true
+    timeout: 5
